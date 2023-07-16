@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WpfApp1</id>
+    <version>1.0.0</version>
+    <authors>WpfApp1</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="ToastNotifications" version="2.5.1" exclude="Build,Analyzers" />
+        <dependency id="ToastNotifications.Messages" version="2.5.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\VSproject\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.runtimeconfig.json" target="lib\net6.0-windows7.0\WpfApp1.runtimeconfig.json" />
+    <file src="D:\VSproject\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.dll" target="lib\net6.0-windows7.0\WpfApp1.dll" />
+  </files>
+</package>

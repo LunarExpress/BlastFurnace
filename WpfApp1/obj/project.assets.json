@@ -1,0 +1,154 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "ToastNotifications/2.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ToastNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ToastNotifications.dll": {}
+        }
+      },
+      "ToastNotifications.Messages/2.5.1": {
+        "type": "package",
+        "dependencies": {
+          "ToastNotifications": "2.5.1"
+        },
+        "compile": {
+          "lib/net40/ToastNotifications.Messages.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ToastNotifications.Messages.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ToastNotifications/2.5.1": {
+      "sha512": "0ZBWG0FCPafwbIzNhjWgC0GEOyk51GF3rYWrh5QJ61ZxDEoLgdDsEUt8HMxYN7lRLVt/mWhtgdbe4OmhXfwtkA==",
+      "type": "package",
+      "path": "toastnotifications/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/ToastNotifications.dll",
+        "readme.txt",
+        "toastnotifications.2.5.1.nupkg.sha512",
+        "toastnotifications.nuspec"
+      ]
+    },
+    "ToastNotifications.Messages/2.5.1": {
+      "sha512": "KG4oMi61ShmRuPK3/yAFhUph/rZGYmS8IcsIvF2Fk3np11fQo6ZjdK2XUmFnY9b0oQY9IilxhCmOdVGoOGEeHQ==",
+      "type": "package",
+      "path": "toastnotifications.messages/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/ToastNotifications.Messages.dll",
+        "toastnotifications.messages.2.5.1.nupkg.sha512",
+        "toastnotifications.messages.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "ToastNotifications >= 2.5.1",
+      "ToastNotifications.Messages >= 2.5.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Ancid\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\VSproject\\WpfApp1\\WpfApp1\\BlastFurnace.csproj",
+      "projectName": "BlastFurnace",
+      "projectPath": "D:\\VSproject\\WpfApp1\\WpfApp1\\BlastFurnace.csproj",
+      "packagesPath": "C:\\Users\\Ancid\\.nuget\\packages\\",
+      "outputPath": "D:\\VSproject\\WpfApp1\\WpfApp1\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Ancid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "ToastNotifications": {
+            "target": "Package",
+            "version": "[2.5.1, )"
+          },
+          "ToastNotifications.Messages": {
+            "target": "Package",
+            "version": "[2.5.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“ToastNotifications 2.5.1”。此包可能与项目不完全兼容。",
+      "libraryId": "ToastNotifications",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“ToastNotifications.Messages 2.5.1”。此包可能与项目不完全兼容。",
+      "libraryId": "ToastNotifications.Messages",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

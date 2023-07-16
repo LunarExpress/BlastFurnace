@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BlastFurnace</id>
+    <version>1.0.0</version>
+    <authors>BlastFurnace</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="ToastNotifications" version="2.5.1" exclude="Build,Analyzers" />
+        <dependency id="ToastNotifications.Messages" version="2.5.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\VSproject\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\BlastFurnace.runtimeconfig.json" target="lib\net6.0-windows7.0\BlastFurnace.runtimeconfig.json" />
+    <file src="D:\VSproject\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\BlastFurnace.dll" target="lib\net6.0-windows7.0\BlastFurnace.dll" />
+  </files>
+</package>

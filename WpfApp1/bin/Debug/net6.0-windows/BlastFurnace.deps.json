@@ -1,0 +1,60 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BlastFurnace/1.0.0": {
+        "dependencies": {
+          "ToastNotifications": "2.5.1",
+          "ToastNotifications.Messages": "2.5.1"
+        },
+        "runtime": {
+          "BlastFurnace.dll": {}
+        }
+      },
+      "ToastNotifications/2.5.1": {
+        "runtime": {
+          "lib/net40/ToastNotifications.dll": {
+            "assemblyVersion": "2.5.1.0",
+            "fileVersion": "2.5.1.0"
+          }
+        }
+      },
+      "ToastNotifications.Messages/2.5.1": {
+        "dependencies": {
+          "ToastNotifications": "2.5.1"
+        },
+        "runtime": {
+          "lib/net40/ToastNotifications.Messages.dll": {
+            "assemblyVersion": "2.5.1.0",
+            "fileVersion": "2.5.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BlastFurnace/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ToastNotifications/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0ZBWG0FCPafwbIzNhjWgC0GEOyk51GF3rYWrh5QJ61ZxDEoLgdDsEUt8HMxYN7lRLVt/mWhtgdbe4OmhXfwtkA==",
+      "path": "toastnotifications/2.5.1",
+      "hashPath": "toastnotifications.2.5.1.nupkg.sha512"
+    },
+    "ToastNotifications.Messages/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KG4oMi61ShmRuPK3/yAFhUph/rZGYmS8IcsIvF2Fk3np11fQo6ZjdK2XUmFnY9b0oQY9IilxhCmOdVGoOGEeHQ==",
+      "path": "toastnotifications.messages/2.5.1",
+      "hashPath": "toastnotifications.messages.2.5.1.nupkg.sha512"
+    }
+  }
+}
