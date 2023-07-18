@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nduYzT3BtQ1IJc8QjXPkhWZxY7O3ihsFAfbcYwh9eCigFBcNeq+KimjVYYm1ck99L+YXsqWMo6I2GYh+o+E9zQ==",
+  "dgSpecHash": "XxziskzlW4UJalKEvY4rsLhkio4+ii1O7qnv0OICu5/cFtX3RzXO1Qh9Sgh/9Agd1j5q+mNUerrtclF/uXkacw==",
   "success": true,
-  "projectFilePath": "D:\\VSproject\\WpfApp1\\WpfApp1\\BlastFurnace.csproj",
+  "projectFilePath": "E:\\MyGitProjects\\BlastFurnace\\WpfApp1\\BlastFurnace.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ancid\\.nuget\\packages\\toastnotifications\\2.5.1\\toastnotifications.2.5.1.nupkg.sha512",
-    "C:\\Users\\Ancid\\.nuget\\packages\\toastnotifications.messages\\2.5.1\\toastnotifications.messages.2.5.1.nupkg.sha512"
+    "C:\\Users\\ZYKG\\.nuget\\packages\\toastnotifications\\2.5.1\\toastnotifications.2.5.1.nupkg.sha512",
+    "C:\\Users\\ZYKG\\.nuget\\packages\\toastnotifications.messages\\2.5.1\\toastnotifications.messages.2.5.1.nupkg.sha512"
   ],
   "logs": [
     {

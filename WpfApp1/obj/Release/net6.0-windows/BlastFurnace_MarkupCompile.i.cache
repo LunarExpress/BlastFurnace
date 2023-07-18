@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\VSproject\WpfApp1\WpfApp1\obj\Release\net6.0-windows\
+E:\MyGitProjects\BlastFurnace\WpfApp1\obj\Release\net6.0-windows\
 BlastFurnace
 none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
-D:\VSproject\WpfApp1\WpfApp1\App.xaml
+E:\MyGitProjects\BlastFurnace\WpfApp1\App.xaml
 11407045341
-
+1-913308027
 71384696398
-196314431636
+19657946457
 MainWindow.xaml;
 
-False
+True
 

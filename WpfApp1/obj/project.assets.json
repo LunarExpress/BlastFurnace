@@ -59,19 +59,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ancid\\.nuget\\packages\\": {}
+    "C:\\Users\\ZYKG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VSproject\\WpfApp1\\WpfApp1\\BlastFurnace.csproj",
+      "projectUniqueName": "E:\\MyGitProjects\\BlastFurnace\\WpfApp1\\BlastFurnace.csproj",
       "projectName": "BlastFurnace",
-      "projectPath": "D:\\VSproject\\WpfApp1\\WpfApp1\\BlastFurnace.csproj",
-      "packagesPath": "C:\\Users\\Ancid\\.nuget\\packages\\",
-      "outputPath": "D:\\VSproject\\WpfApp1\\WpfApp1\\obj\\",
+      "projectPath": "E:\\MyGitProjects\\BlastFurnace\\WpfApp1\\BlastFurnace.csproj",
+      "packagesPath": "C:\\Users\\ZYKG\\.nuget\\packages\\",
+      "outputPath": "E:\\MyGitProjects\\BlastFurnace\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ancid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ZYKG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -125,7 +125,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },

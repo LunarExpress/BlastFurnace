@@ -14,11 +14,8 @@ namespace WpfApp1
 {
     internal class MainUtility
     {
-        List<string> ToChangePath = new();
-        string? OriginalPath;//存储路径
         FileStream OriginalFileStream;
         StreamReader? OriginalReadStream;
-        StreamWriter? OriginalWriteStream;
         List<string> OriginalStringArr = new();
         List<int> OriginalPathid = new();
         List<ImageDataSource> ImageDataList = new();
@@ -26,8 +23,6 @@ namespace WpfApp1
         {
             OriginalFileStream = new FileStream(TemplatePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             OriginalReadStream = new StreamReader(OriginalFileStream);
-            OriginalWriteStream = new StreamWriter(OriginalFileStream);
-            OriginalPath = TemplatePath;
             //OriginalReadStream = new StreamReader(OriginalPath);
             
 
@@ -50,7 +45,6 @@ namespace WpfApp1
                 List<int> ToChangePathid = ReadPathID(ChangeStreamReader);
                 ImageDataSource ImageSource = new ImageDataSource(FileName, ToChangePathid[4]);
                 ImageDataList.Add(ImageSource);
-                int index = 0;
                 List<string> OriginalList = TransformReaderToList(OriginalReadStream);
                 List<string> ChangedList = WriteInOriginal(OriginalList, ToChangePathid);//写入Pathid
                 CleanAndFlush(ChangeStreamWriter, ChangedList);//清除ToChange的内容。直接粘贴写入后的Original
@@ -114,22 +108,6 @@ namespace WpfApp1
             }//写入pathid数组
             return result;
         }
-        List<int> ReadPathID(FileStream fileStream)
-        {
-            StreamReader reader = new StreamReader(fileStream);
-            List<string> ToChangeText = TransformReaderToList(reader);
-            List<int> result = new List<int>();
-            foreach (string ToChangeRows in ToChangeText)
-            {
-                if (ToChangeRows.Contains("PathID"))
-                {
-                    int pathid = int.Parse(RegexExtract(ToChangeRows));
-                    result.Add(pathid);
-                }
-
-            }//写入pathid数组
-            return result;
-        }
         string RegexExtract(string inputString) 
         {
             string pattern = @"m_PathID\s*=\s*(\d+)";
@@ -176,12 +154,6 @@ namespace WpfApp1
            fileStream.Seek(0, SeekOrigin.Begin);
                 // 继续使用 StreamReader 对象进行读取操作
         }
-        void ReturnToTop(FileStream obj)
-        {
-            obj.Seek(0, SeekOrigin.Begin);
-            // 继续使用 StreamReader 对象进行读取操作
-        }
-
         public bool CheckMultiple(List<string> multi) 
         {
             foreach (string ToChangeStr in multi)

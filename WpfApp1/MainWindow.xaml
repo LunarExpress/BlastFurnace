@@ -8,7 +8,7 @@
         Title="BlastFurnace" Height="206" Width="820"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
         >
-        
+
     <Grid Margin="0,0,10,0" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="123*"/>
@@ -31,6 +31,5 @@
         </Label>
         <DataGrid Name="DG1" Margin="267,16,6,15" Grid.Column="1" ItemsSource="{Binding ImageData}" AutoGenerateColumns="True">
         </DataGrid>
-
     </Grid>
 </Window>

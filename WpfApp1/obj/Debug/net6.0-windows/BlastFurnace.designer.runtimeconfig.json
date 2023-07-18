@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Ancid\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Ancid\\.nuget\\packages"
+      "C:\\Users\\ZYKG\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ZYKG\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

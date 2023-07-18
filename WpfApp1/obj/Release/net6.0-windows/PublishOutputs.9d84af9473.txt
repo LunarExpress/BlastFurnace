@@ -1,0 +1,7 @@
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\BlastFurnace.exe
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\BlastFurnace.dll
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\BlastFurnace.deps.json
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\BlastFurnace.runtimeconfig.json
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\BlastFurnace.pdb
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\ToastNotifications.dll
+E:\MyGitProjects\BlastFurnace\WpfApp1\bin\Release\net6.0-windows\publish\ToastNotifications.Messages.dll
