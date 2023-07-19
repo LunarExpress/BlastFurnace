@@ -37,6 +37,7 @@ namespace WpfApp1
             TemplateRun = (Run)FindName("Template");
             MultipleRun = (Run)FindName("Multiple");
             DG = (DataGrid)FindName("DG1");
+            GenerateComboBox();
         }
         private void OnImportTemplateClicked(object sender, RoutedEventArgs e)
         {
@@ -58,6 +59,26 @@ namespace WpfApp1
                 }
             }
         }
+
+        public void UseThis(object sender, RoutedEventArgs e)
+        {
+            ComboBox cb = (ComboBox)FindName("VersionBox");
+            string selectValue = cb.SelectedValue.ToString();
+            if (program.CheckTemplate(selectValue))
+            {
+                TemplateRun.Text = "Status:OK";
+                TemplateRun.Foreground = Brushes.Green;
+                TemplatePath = (string)cb.SelectedValue;
+                TempReady = true;
+            }
+            else
+            {
+                TemplateRun.Text = "Status:Error";
+                TemplateRun.Foreground = Brushes.Red;
+                TempReady = false;
+            }
+        }
+
         private void OnImportMultipleClicked(object sender, RoutedEventArgs e)
         {
             var OpenMultipleDialog = new OpenFileDialog();
@@ -102,5 +123,18 @@ namespace WpfApp1
             DG.Items.Refresh();
             return;
         }
+
+        public void GenerateComboBox() 
+        {
+            SdfDataBase db = new();
+            ComboBox comboBox = (ComboBox)FindName("VersionBox");
+            List<SdfData> FileList = db.UIVersionView();
+            comboBox.DataContext = this;
+            comboBox.ItemsSource = FileList;
+            comboBox.DisplayMemberPath = "FolderName";
+            comboBox.SelectedValuePath = "TextPath";
+        }
+
+
     }
 }

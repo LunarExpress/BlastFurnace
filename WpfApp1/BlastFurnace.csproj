@@ -26,4 +26,8 @@
     <PackageReference Include="ToastNotifications.Messages" Version="2.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SDFResources\" />
+  </ItemGroup>
+
 </Project>
