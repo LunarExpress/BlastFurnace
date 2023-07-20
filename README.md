@@ -14,4 +14,4 @@ Then the font to be modified can be directly imported into the game to realize C
 
 23/7/20更新:现在可以自定义字体库了.使用Set Database按钮可以读取指定目录下的文件夹.例如我设置E:/Db 为目录,那么下拉框里就会出现E:/Db目录下的所有文件夹的名字.
 用于替换的SDF字体应该作为唯一一个txt存在于文件夹内.建议把文件夹的名字设置为版本号方便处理.
-非常感谢https://github.com/baiyanzhao/FolderBrowserForWPF的作者,没想到WPF给我留了这么大一个坑.
+非常感谢https://github.com/baiyanzhao/FolderBrowserForWPF 的作者,没想到WPF给我留了这么大一个坑.
