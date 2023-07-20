@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "FolderBrowserForWPF/1.2.0": {
+        "runtime": {
+          "lib/net5.0-windows7.0/FolderBrowserForWPF.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
       "ToastNotifications/2.5.1": {
         "runtime": {
           "lib/net40/ToastNotifications.dll": {
@@ -28,6 +36,13 @@
     }
   },
   "libraries": {
+    "FolderBrowserForWPF/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CSVh14iL4unRKBSOjWakdch3dJDS6r/sboQ7yoKEbfHEldVcPa8lXqkTtLb2eicFVVS3bGJIBXC3mPKe8CYd/g==",
+      "path": "folderbrowserforwpf/1.2.0",
+      "hashPath": "folderbrowserforwpf.1.2.0.nupkg.sha512"
+    },
     "ToastNotifications/2.5.1": {
       "type": "package",
       "serviceable": true,

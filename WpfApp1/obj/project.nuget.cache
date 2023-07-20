@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XxziskzlW4UJalKEvY4rsLhkio4+ii1O7qnv0OICu5/cFtX3RzXO1Qh9Sgh/9Agd1j5q+mNUerrtclF/uXkacw==",
+  "dgSpecHash": "gz7Lvj618wF7gd2D7mrlXtiAlTP1LosRLIMFb/f3ZbE+0T1NhwfttnplZvjZL9F5YFZ8ABH1HAT5K49rkR0vPw==",
   "success": true,
   "projectFilePath": "E:\\MyGitProjects\\BlastFurnace\\WpfApp1\\BlastFurnace.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ZYKG\\.nuget\\packages\\folderbrowserforwpf\\1.2.0\\folderbrowserforwpf.1.2.0.nupkg.sha512",
     "C:\\Users\\ZYKG\\.nuget\\packages\\toastnotifications\\2.5.1\\toastnotifications.2.5.1.nupkg.sha512",
     "C:\\Users\\ZYKG\\.nuget\\packages\\toastnotifications.messages\\2.5.1\\toastnotifications.messages.2.5.1.nupkg.sha512"
   ],

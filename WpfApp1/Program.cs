@@ -156,6 +156,7 @@ namespace WpfApp1
         }
         public bool CheckMultiple(List<string> multi) 
         {
+            if(0 == multi.Count) return false;
             foreach (string ToChangeStr in multi)
             {
                 FileStream ToChangeFileStream = new FileStream(ToChangeStr, FileMode.OpenOrCreate, FileAccess.ReadWrite);

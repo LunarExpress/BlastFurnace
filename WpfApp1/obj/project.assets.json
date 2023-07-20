@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "FolderBrowserForWPF/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/FolderBrowserForWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/FolderBrowserForWPF.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "ToastNotifications/2.5.1": {
         "type": "package",
         "compile": {
@@ -26,6 +38,19 @@
     }
   },
   "libraries": {
+    "FolderBrowserForWPF/1.2.0": {
+      "sha512": "CSVh14iL4unRKBSOjWakdch3dJDS6r/sboQ7yoKEbfHEldVcPa8lXqkTtLb2eicFVVS3bGJIBXC3mPKe8CYd/g==",
+      "type": "package",
+      "path": "folderbrowserforwpf/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "folderbrowserforwpf.1.2.0.nupkg.sha512",
+        "folderbrowserforwpf.nuspec",
+        "lib/net472/FolderBrowserForWPF.dll",
+        "lib/net5.0-windows7.0/FolderBrowserForWPF.dll"
+      ]
+    },
     "ToastNotifications/2.5.1": {
       "sha512": "0ZBWG0FCPafwbIzNhjWgC0GEOyk51GF3rYWrh5QJ61ZxDEoLgdDsEUt8HMxYN7lRLVt/mWhtgdbe4OmhXfwtkA==",
       "type": "package",
@@ -54,6 +79,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "FolderBrowserForWPF >= 1.2.0",
       "ToastNotifications >= 2.5.1",
       "ToastNotifications.Messages >= 2.5.1"
     ]
@@ -97,6 +123,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "FolderBrowserForWPF": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "ToastNotifications": {
             "target": "Package",
             "version": "[2.5.1, )"

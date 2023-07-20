@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
+using FolderBrowserForWPF;
 
 namespace WpfApp1
 {
@@ -26,6 +27,7 @@ namespace WpfApp1
         public List<ImageDataSource> ImageData { get; set; }
         bool TempReady = false;
         bool MultiReady = false;
+        SdfDataBase db = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -63,6 +65,13 @@ namespace WpfApp1
         public void UseThis(object sender, RoutedEventArgs e)
         {
             ComboBox cb = (ComboBox)FindName("VersionBox");
+            if (cb.SelectedIndex == -1) 
+            {
+                TemplateRun.Text = "Status:Empty";
+                TemplateRun.Foreground = Brushes.Red;
+                TempReady = false;
+                return;
+            }
             string selectValue = cb.SelectedValue.ToString();
             if (program.CheckTemplate(selectValue))
             {
@@ -77,6 +86,19 @@ namespace WpfApp1
                 TemplateRun.Foreground = Brushes.Red;
                 TempReady = false;
             }
+        }
+
+        public void SetDataBase(object sender,RoutedEventArgs e) 
+        {
+           Dialog dialog = new Dialog();
+           string FolderPath="";
+            if (dialog.ShowDialog()==true) 
+            {
+                FolderPath = dialog.FileName;
+            }
+            CreateRegistry(FolderPath);
+            GenerateComboBox();
+
         }
 
         private void OnImportMultipleClicked(object sender, RoutedEventArgs e)
@@ -126,8 +148,9 @@ namespace WpfApp1
 
         public void GenerateComboBox() 
         {
-            SdfDataBase db = new();
             ComboBox comboBox = (ComboBox)FindName("VersionBox");
+            if (db.UIVersionView() == null)
+                return;
             List<SdfData> FileList = db.UIVersionView();
             comboBox.DataContext = this;
             comboBox.ItemsSource = FileList;
@@ -135,6 +158,14 @@ namespace WpfApp1
             comboBox.SelectedValuePath = "TextPath";
         }
 
-
+        void CreateRegistry(string paths) 
+        {
+            if (paths == "")
+                throw new System.Exception("地址不存在");
+            // 写入注册表
+            Microsoft.Win32.Registry.CurrentUser.DeleteSubKeyTree("BlastFurnace", false);
+            var key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("BlastFurnace");
+            key.SetValue("Path",paths);
+        }
     }
 }

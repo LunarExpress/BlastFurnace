@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="BlastFurnace" Height="265" Width="820"
+        Title="BlastFurnace" Height="265" Width="971"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
         >
 
@@ -24,8 +24,9 @@
                 <Run Text="Status:Empty" Foreground="Black" Name="Template"/>
             </TextBlock>
         </Label>
-        <DataGrid Name="DG1" Grid.Column="1" ItemsSource="{Binding ImageData}" AutoGenerateColumns="True" Height="180" Width="300" HorizontalAlignment="Left" Canvas.Left="491" Canvas.Top="16" VerticalAlignment="Center"/>
+        <DataGrid Name="DG1" Grid.Column="1" ItemsSource="{Binding ImageData}" AutoGenerateColumns="True" Height="180" Width="428" HorizontalAlignment="Left" Canvas.Left="491" Canvas.Top="16" VerticalAlignment="Center"/>
         <ComboBox Name="VersionBox" HorizontalAlignment="Left" Margin="50,191,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
         <Button Grid.Column="1" Name="Usethis" Click="UseThis" Content="←Use this" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Canvas.Left="225" Canvas.Top="192"/>
+        <Button Content="SetDatabase" Click="SetDataBase" Canvas.Left="367" Canvas.Top="191" HorizontalAlignment="Left" VerticalAlignment="Center" Width="96"/>
     </Canvas>
 </Window>
