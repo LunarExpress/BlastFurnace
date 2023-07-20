@@ -19,6 +19,8 @@ namespace BlastFurnace
             var key = Registry.CurrentUser.OpenSubKey("BlastFurnace");
             if (key == null)
                 return null;
+            if ((string)key.GetValue("Path") == null || (string)key.GetValue("Path") == "")
+                return null;
             else
                 folderPath = (string)key.GetValue("Path");
             string[] files = System.IO.Directory.GetDirectories(folderPath, "*", System.IO.SearchOption.TopDirectoryOnly);

@@ -96,6 +96,8 @@ namespace WpfApp1
             {
                 FolderPath = dialog.FileName;
             }
+            if (dialog.FileName == null)
+                return;
             CreateRegistry(FolderPath);
             GenerateComboBox();
 
