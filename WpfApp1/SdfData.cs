@@ -12,7 +12,10 @@ namespace BlastFurnace
             this.FolderPath = FilePath;
             this.FolderName = Path.GetFileName(FilePath);
             string[] txt = Directory.GetFiles(FolderPath, "*.txt", System.IO.SearchOption.TopDirectoryOnly);
-            TextPath = txt[0];
+            if (txt.Length >= 1)
+                TextPath = txt[0];
+            else
+                return;
         }
     }
 }
