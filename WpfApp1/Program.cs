@@ -17,7 +17,7 @@ namespace WpfApp1
         FileStream OriginalFileStream;
         StreamReader? OriginalReadStream;
         List<string> OriginalStringArr = new();
-        List<int> OriginalPathid = new();
+        List<string> OriginalPathid = new();
         List<ImageDataSource> ImageDataList = new();
         public void Main(string TemplatePath,List<string> ToChangeList)
         {
@@ -31,7 +31,7 @@ namespace WpfApp1
             {
                 if (OriginalString.Contains("PathID"))
                 {
-                    int pathid = int.Parse(Regex.Replace(OriginalString, "[^0-9]", ""));
+                    string pathid = Regex.Replace(OriginalString, "[^0-9]", "");
                     OriginalPathid.Add(pathid);
                 }
             }//写入pathid数组
@@ -42,7 +42,7 @@ namespace WpfApp1
                 StreamReader ChangeStreamReader = new StreamReader(ToChangeFileStream);
                 string FileName = Path.GetFileNameWithoutExtension(ToChangeFileStream.Name);
                 string ThisLine;
-                List<int> ToChangePathid = ReadPathID(ChangeStreamReader);
+                List<string> ToChangePathid = ReadPathID(ChangeStreamReader);
                 ImageDataSource ImageSource = new ImageDataSource(FileName, ToChangePathid[4]);
                 ImageDataList.Add(ImageSource);
                 List<string> OriginalList = TransformReaderToList(OriginalReadStream);
@@ -58,7 +58,7 @@ namespace WpfApp1
         {
             return ImageDataList;
         }
-        List<string> WriteInOriginal(List<string> Original,List<int>ToChangePathid) 
+        List<string> WriteInOriginal(List<string> Original,List<string>ToChangePathid) 
         {
             int index = 0;
             for (int i=0;i<Original.Count;i++) 
@@ -67,7 +67,7 @@ namespace WpfApp1
                 {
                     if (index >= 5)
                         break;
-                    Original[i] = Regex.Replace(Original[i], @"PathID\s*=\s*\d+", "PathID = " + ToChangePathid[index]);
+                    Original[i] = Regex.Replace(Original[i], @"PathID\s*=\s*(-?\d+)", "PathID = " + ToChangePathid[index]);
                     index++;
                 } 
             }
@@ -93,15 +93,15 @@ namespace WpfApp1
             List<string> result = new List<string>(FilestreamToStringArr(reader));
             return result;
         }
-        List<int> ReadPathID(StreamReader reader)
+        List<string> ReadPathID(StreamReader reader)
         {
             List<string> ToChangeText = TransformReaderToList(reader);
-            List<int> result = new List<int>();
+            List<string> result = new List<string>();
             foreach (string ToChangeRows in ToChangeText)
             {
                 if (ToChangeRows.Contains("PathID"))
                 {
-                    int pathid = int.Parse(RegexExtract(ToChangeRows));
+                    string pathid = RegexExtract(ToChangeRows);
                     result.Add(pathid);
                 }
 
@@ -110,7 +110,7 @@ namespace WpfApp1
         }
         string RegexExtract(string inputString) 
         {
-            string pattern = @"m_PathID\s*=\s*(\d+)";
+            string pattern = @"m_PathID\s*=\s*(-?\d+)";
             Regex regex = new Regex(pattern);
             Match match = regex.Match(inputString);
             if (match.Success)

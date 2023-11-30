@@ -4,9 +4,9 @@ namespace BlastFurnace
     public class ImageDataSource
     {
         public string name { get; set; }
-        public int pathid { get; set; }
+        public string pathid { get; set; }
 
-        public ImageDataSource(string name, int pathid)
+        public ImageDataSource(string name, string pathid)
         {
             this.name = name;
             this.pathid = pathid;
